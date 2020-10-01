@@ -98,7 +98,7 @@ Step 6: grant permissions if using api will use  non-admin user
 
     Grant All permissions on sequence Addresses to 'api user'
 
-    or use the grant wizard is you have pg4Admin installed
+    or use the grant wizard if you have pg4Admin installed
 
 Step 7: Run test
 
