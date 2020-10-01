@@ -10,7 +10,7 @@ Nodejs
 Express,
 Sequelize
 esm
-Webpack for bundeling
+Webpack for bundling
 database is a postresql latest
 jest for testing
 babel
