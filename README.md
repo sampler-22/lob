@@ -92,7 +92,7 @@ Step 5 create table in target
     for production database:
         ./node_modules/.bin/sequelize-cli db:migrate --env production
 
-Step 6: grant permissions if using api will use  non-admin user
+Step 6: grant permissions if api will use  non-admin user
     
     Grant All permissions on Table Addresses to 'api user'
 
