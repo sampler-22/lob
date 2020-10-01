@@ -48,7 +48,7 @@ describe("Testing address", () => {
                 zip: _address.zip,
             })
             .then((res) => {
-                expect(res.status).toBe(200);
+                expect(res.status).toBe(201);
                 stored = res.body.data;
                 done();
             });
@@ -65,7 +65,7 @@ describe("Testing address", () => {
                 zip: 94116,
             })
             .then((res) => {
-                expect(res.status).toBe(200);
+                expect(res.status).toBe(201);
                 done();
             });
     });
@@ -115,7 +115,7 @@ describe("Testing address", () => {
     test("remove address", (done) => {
         request.delete(`${baseUrl}/${stored.id}`)
         .then((res) => {
-            expect(res.status).toBe(200);
+            expect(res.status).toBe(204);
             done();
         });
     });

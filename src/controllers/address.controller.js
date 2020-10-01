@@ -128,7 +128,7 @@ export const createAddress = async (req, res) => {
         });
 
         if (result) {
-            res.status(200).json({
+            res.status(201).json({
                 success: false,
                 message: "Address created successfully",
                 data: result,
@@ -179,7 +179,7 @@ export const deleteAddress = async (req, res) => {
         const _data = await Address.destroy({ where: { id: req.params.id } });
 
         if (_data) {
-            res.status(200).json({
+            res.status(204).json({
                 success: true,
                 message: "Address delete successfully",
                 data: _data,
