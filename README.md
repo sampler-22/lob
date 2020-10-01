@@ -11,9 +11,9 @@ Express,
 Sequelize,
 Esm,
 Webpack for bundling,
-database is a postresql latest
-jest for testing,
-babel
+Postresql database latest,
+Jest for testing,
+and Babel
 
 Step 1: Install packages
     npm install
