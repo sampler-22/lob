@@ -1,4 +1,5 @@
 import States from "../../states.json";
+import mcache from "memory-cache";
 
 export const paginate = ({ page, pageSize }) => {
     const offset = page * pageSize;
@@ -10,11 +11,11 @@ export const paginate = ({ page, pageSize }) => {
 export const stateCodes = (state) => {
     let code;
     if (state.length >= 2) {
-        code = state.filter((item) => {
+        code = States.filter((item) => {
             return item.state.toLowerCase() === state.toLowerCase();
         });
     } else {
-        code = state.filter((item) => {
+        code = States.filter((item) => {
             return item.code.toLowerCase() === state.toLowerCase();
         });
     }
@@ -24,4 +25,20 @@ export const stateCodes = (state) => {
 
 export const parseNullValue = (value) => {
     return value ? value : "";
+};
+
+export const getCachedData = (key) => {
+    let cacheBody = mcache.get(key);
+    if (cacheBody) return cacheBody;
+};
+
+export const addDataToCache = (key, message, data) => {
+    const _result = {
+        success: true,
+        message: message,
+        data: data,
+    };
+    mcache.put(key, _result, process.env.API_CACHE_DURATION * 1000);
+
+    return _result;
 };

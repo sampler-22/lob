@@ -1,7 +1,10 @@
 import Address from "../models/address.model.js";
-import { parseNullValue } from "./controller.helper.js";
+import {
+    parseNullValue,
+    getCachedData,
+    addDataToCache,
+} from "./controller.helper.js";
 import Sequelize from "sequelize";
-import mcache from "memory-cache";
 
 const Op = Sequelize.Op;
 
@@ -17,22 +20,6 @@ const joinAddress = (body) => {
           )} ${parseNullValue(body.state)} ${parseNullValue(body.zip)}`;
 
     return joined;
-};
-
-const getCachedData = (key) => {
-    let cacheBody = mcache.get(key);
-    if (cacheBody) return cacheBody;
-};
-
-const addDataToCache = (key, message, data) => {
-    const _result = {
-        success: true,
-        message: message,
-        data: data,
-    };
-    mcache.put(key, _result, process.env.API_CACHE_DURATION * 1000);
-
-    return _result;
 };
 
 export const addresses = async (req, res) => {
