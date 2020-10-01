@@ -131,7 +131,7 @@ export const createAddress = async (req, res) => {
 
         const result = await Address.create({
             line1: req.body.line1,
-            line2: req.body.line2,
+            line2: req.body.line2 ? req.body.line2 : "",
             city: req.body.city,
             state: req.body.state,
             zip: req.body.zip,
@@ -162,7 +162,7 @@ export const updateAddress = async (req, res) => {
         let _data = await Address.update(
             {
                 line1: req.body.line1,
-                line2: req.body.line2,
+                line2: req.body.line2 ? req.body.line2 : "",
                 city: req.body.city,
                 state: req.body.state,
                 zip: req.body.zip,
