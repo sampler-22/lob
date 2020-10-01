@@ -19,6 +19,7 @@ Step 1: Install packages
     npm install
 
 Step 2: Create databases
+
     create 3 databases on postgresl instance
         example: lob_development, lob_test, lob_production
 
@@ -35,6 +36,7 @@ Step 2: Create databases
     
 
 Step 3: create .env file
+
     create 3 .env files on the root and name as following:
         .env.development, .env.test, .env.production
 
@@ -50,6 +52,7 @@ Step 3: create .env file
         API_CACHE_DURATION=60
 
 Step 4. create Sequelizer config
+
     path ./db/config/config.json
 
     {
@@ -77,6 +80,7 @@ Step 4. create Sequelizer config
     }
 
 Step 5 create table in target 
+
     Run the following in terminal. make sure you are in the root directory.
 
     for dev database:
@@ -96,11 +100,13 @@ Step 6: grant permissions if using api will use  non-admin user
     or use the grant wizard is you have pg4Admin installed
 
 Step 7: Run test
+
     npm test
 
     this is seed the database and run all the tests.
 
 Step 8: start pointing to development
+
     npm start
 
     this is seed the database and run all the tests. 
