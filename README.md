@@ -6,13 +6,13 @@ Thank you in advance for making time for me.
 PROJECT INTRO
 This is a rest-api that manage addresses. The project is comprised of the following core technologies:
 
-Nodejs
+Nodejs,
 Express,
-Sequelize
-esm
-Webpack for bundling
+Sequelize,
+Esm,
+Webpack for bundling,
 database is a postresql latest
-jest for testing
+jest for testing,
 babel
 
 Step 1: Install packages
