@@ -6,14 +6,14 @@ Thank you in advance for making time for me.
 PROJECT INTRO
 This is a rest-api that manage addresses. The project is comprised of the following core technologies:
 
-Nodejs
+Nodejs,
 Express,
-Sequelize
-esm
-Webpack for bundeling
-database is a postresql latest
-jest for testing
-babel
+Sequelize,
+Esm,
+Webpack for bundling,
+Postresql database latest,
+Jest for testing,
+and Babel
 
 Step 1: Install packages
     npm install
@@ -88,6 +88,7 @@ Step 5 create table in target
         ./node_modules/.bin/sequelize-cli db:migrate --env production
 
 Step 6: grant permissions if using api will use  non-admin user
+    
     Grant All permissions on Table Addresses to 'api user'
 
     Grant All permissions on sequence Addresses to 'api user'
